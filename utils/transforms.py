@@ -6,8 +6,8 @@ from torchvision import transforms as transforms
 # Define the training tranforms
 def get_train_aug():
     return A.Compose([
-        A.HorizontalFlip(0.5),
-        A.VerticalFlip(0.5),
+        A.HorizontalFlip(False, 0.5),
+        A.VerticalFlip(False, 0.5),
         A.MotionBlur(blur_limit=3, p=0.1),
         A.Blur(blur_limit=3, p=0.1),
         A.RandomBrightnessContrast(
